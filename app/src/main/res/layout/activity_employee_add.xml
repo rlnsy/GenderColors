@@ -40,7 +40,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="27dp"
-        android:id="@+id/Button"
+        android:id="@+id/employee_done"
         android:background="@android:drawable/editbox_dropdown_dark_frame"
         android:textColor="@android:color/white" />
 
