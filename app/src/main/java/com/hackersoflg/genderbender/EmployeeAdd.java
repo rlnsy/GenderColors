@@ -9,7 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
-public class employee_add extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class EmployeeAdd extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     private String companyChoice;
     private String genderChoice;

@@ -2,8 +2,6 @@ package com.hackersoflg.genderbender;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -29,8 +27,15 @@ public class HomeScreen extends AppCompatActivity {
         });
         */
 
-        Button addEmployeeButton = (Button) findViewById(R.id.employeebutton);
+        Button companyButton = (Button) findViewById(R.id.view_companies_button);
+        companyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startCompanyActivity();
+            }
+        });
 
+        Button addEmployeeButton = (Button) findViewById(R.id.employeebutton);
         addEmployeeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -39,7 +44,6 @@ public class HomeScreen extends AppCompatActivity {
         });
 
         Button keyButton = (Button) findViewById(R.id.keybutton);
-
         keyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -48,13 +52,17 @@ public class HomeScreen extends AppCompatActivity {
         });
     }
 
+    public void startCompanyActivity() {
+
+    }
+
     public void startNewEmployeeActivity() {
-        Intent intent = new Intent(this, employee_add.class);
+        Intent intent = new Intent(this, EmployeeAdd.class);
         startActivity(intent);
     }
 
     public void startKeyActivity() {
-        Intent intent = new Intent(this, key.class);
+        Intent intent = new Intent(this, Key.class);
         startActivity(intent);
     }
 }
