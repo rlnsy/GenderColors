@@ -69,5 +69,7 @@ public class EmployeeAdd extends AppCompatActivity implements AdapterView.OnItem
     public void submitEmployee(String companyChoice, String genderChoice) {
         Log.d("COMPANY",companyChoice);
         Log.d("GENDER",genderChoice);
+        Log.d("COMPANY",new Integer(CompanyData.getInstance().getCompany("Netflix").getGenderFrequency("Male")).toString());
+        CompanyData.getInstance().addEmployee(companyChoice,genderChoice);
     }
 }

@@ -19,7 +19,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".EmployeeAdd" />
-        <activity android:name=".Key"></activity>
+        <activity android:name=".Key" />
+        <activity android:name=".CompanyList" />
+        <activity android:name=".CompanyDisplay"></activity>
     </application>
 
 </manifest>

@@ -1,5 +1,6 @@
 package com.hackersoflg.genderbender;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
@@ -7,17 +8,40 @@ import java.util.HashMap;
  */
 public class Company {
 
-    public HashMap<String,Integer> genderFrequencies;
+    public HashMap<String,GenderGroup> genderFrequencyGroups;
+    public String name;
 
-    public Company () {
-        genderFrequencies = new HashMap<String,Integer> ();
-        for(String gender : CompanyData.genders) {
-            genderFrequencies.put(gender,0);
+    public class GenderGroup {
+        public String genderTag;
+        public int frequency;
+
+        public GenderGroup(String genderTag,int frequency) {
+            this.genderTag = genderTag;
+            this.frequency = frequency;
+        }
+
+        public void addEmployee() {
+            frequency++;
+        }
+
+        public int getFrequency() {
+            return frequency;
         }
     }
 
+    public Company (String name) {
+        genderFrequencyGroups = new HashMap<String,GenderGroup> ();
+        for(String gender : CompanyData.genders) {
+            genderFrequencyGroups.put(gender,new GenderGroup(gender,0));
+        }
+        this.name = name;
+    }
+
     public void addEmployee(String gender) {
-        Integer frequency = genderFrequencies.get(gender);
-        frequency = frequency.intValue() + 1;
+        genderFrequencyGroups.get(gender).addEmployee();
+    }
+
+    public int getGenderFrequency(String genderTag) {
+        return genderFrequencyGroups.get(genderTag).getFrequency();
     }
 }

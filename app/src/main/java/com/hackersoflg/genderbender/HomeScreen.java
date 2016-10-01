@@ -53,7 +53,8 @@ public class HomeScreen extends AppCompatActivity {
     }
 
     public void startCompanyActivity() {
-
+        Intent intent = new Intent(this,CompanyList.class);
+        startActivity(intent);
     }
 
     public void startNewEmployeeActivity() {
