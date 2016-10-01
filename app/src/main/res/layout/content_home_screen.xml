@@ -15,7 +15,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
+        android:text="I'm an Employee"
         android:id="@+id/employeebutton"
         android:layout_marginBottom="147dp"
         android:layout_alignParentBottom="true"
@@ -24,7 +24,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
+        android:text="Color Key"
         android:id="@+id/keybutton"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
