@@ -1,4 +1,15 @@
 <resources>
     <string name="app_name">Gender Bender</string>
     <string name="title_activity_home_screen">HomeScreen</string>
+
+    <string-array name="company_choices">
+        <item>Netflix</item>
+        <item>Google</item>
+    </string-array>
+
+    <string-array name="gender_choices">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
 </resources>
